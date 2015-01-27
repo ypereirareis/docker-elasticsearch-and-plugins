@@ -20,7 +20,7 @@ git clone https://github.com/ypereirareis/docker-elasticsearch-and-plugins.git
 ## Run docker container
 
 ```
-docker run -d -p 9200:9200 -p 9300:9300
+docker run -d -p 9200:9200 -p 9300:9300 ypereirareis/docker-elk-and-plugins
 ```
 
 ## Access API and plugins
