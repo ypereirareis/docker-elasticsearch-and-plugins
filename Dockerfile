@@ -1,11 +1,7 @@
 FROM dockerfile/java:oracle-java8
 MAINTAINER Yannick PEREIRA-REIS <yannick.pereira.reis@gmail.com>
 
-RUN apt-get update
-
-RUN apt-get install -y curl
-
-RUN apt-get install -y wget
+RUN apt-get update && apt-get install -y curl wget
 
 ENV ES_PKG_NAME elasticsearch-1.4.2
 
