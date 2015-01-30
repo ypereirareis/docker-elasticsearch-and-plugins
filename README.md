@@ -19,11 +19,25 @@ git clone https://github.com/ypereirareis/docker-elasticsearch-and-plugins.git
 
 ## Run docker container
 
+**Single node**
+
 ```
 docker run -d -p 9200:9200 -p 9300:9300 ypereirareis/docker-elk-and-plugins
 ```
 
+**Small cluster**
+
+Just run several containers changing the binding for http and transport ports:
+
+```
+docker run -d -p 9200:9200 -p 9300:9300 ypereirareis/docker-elk-and-plugins
+docker run -d -p 9201:9200 -p 9301:9300 ypereirareis/docker-elk-and-plugins
+docker run -d -p 9202:9200 -p 9302:9300 ypereirareis/docker-elk-and-plugins
+```
+
 ## Access API and plugins
+
+These URLs are available for each node because HTTP is allowed for each by default.
 
 * [http://localhost:9200/_cluster/health?pretty=true](http://localhost:9200/_cluster/health?pretty=true)
 * [http://localhost:9200/_plugin/marvel](http://localhost:9200/_plugin/marvel)
