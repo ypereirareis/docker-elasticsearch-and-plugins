@@ -1,6 +1,7 @@
 # docker-elasticsearch-and-plugins
 
 [![Join the chat at https://gitter.im/ypereirareis/docker-elasticsearch-and-plugins](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ypereirareis/docker-elasticsearch-and-plugins?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A Dockerfile to built a docker image with ElasticSearch and many plugins
 
 ElasticSearch version: 1.4
