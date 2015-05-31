@@ -1,9 +1,9 @@
-FROM dockerfile/java:oracle-java8
+FROM java:8
 MAINTAINER Yannick PEREIRA-REIS <yannick.pereira.reis@gmail.com>
 
 RUN apt-get update && apt-get install -y curl wget
 
-ENV ES_PKG_NAME elasticsearch-1.4.2
+ENV ES_PKG_NAME elasticsearch-1.5.2
 
 # Install ElasticSearch.
 RUN \
@@ -15,9 +15,6 @@ RUN \
 
 RUN \
     /elasticsearch/bin/plugin -i elasticsearch/marvel/latest
-
-RUN \
-    /elasticsearch/bin/plugin -i karmi/elasticsearch-paramedic
 
 RUN \
     /elasticsearch/bin/plugin -i mobz/elasticsearch-head

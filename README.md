@@ -4,12 +4,11 @@
 
 A Dockerfile to build a docker image with ElasticSearch and many plugins
 
-ElasticSearch version: 1.4.2
+ElasticSearch version: 1.4.2 or 1.5.2(latest)
 
 **Plugins**
 
 * Marvel
-* Paramedic
 * BigDesk
 * HQ
 * Head
@@ -25,7 +24,13 @@ git clone https://github.com/ypereirareis/docker-elasticsearch-and-plugins.git
 **Single node**
 
 ```
-docker run -d -p 9200:9200 -p 9300:9300 ypereirareis/docker-elk-and-plugins
+docker run -d -p 9200:9200 -p 9300:9300 ypereirareis/docker-elk-and-plugins:latest
+```
+
+OR
+
+```
+docker run -d -p 9200:9200 -p 9300:9300 ypereirareis/docker-elk-and-plugins:1.4.2
 ```
 
 **Small cluster**
