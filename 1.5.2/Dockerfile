@@ -40,6 +40,9 @@ RUN cat /kibana/config/kibana.yml
 COPY startup.sh /tmp/startup.sh
 RUN cat /tmp/startup.sh
 
+VOLUME ["/elasticsearch/data/elasticsearch"]
+VOLUME ["/elasticsearch/logs/elasticsearch"]
+
 # Define default command.
 CMD ["/tmp/startup.sh"]
 
